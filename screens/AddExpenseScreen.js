@@ -60,7 +60,7 @@ export default function AddExpenseScreen(props) {
             <TextInput
               placeholder="Barang"
               placeholderTextColor="#64748b"
-              className="bg-white rounded-md my-3 px-4 shadow-sm"
+              className="bg-white rounded-md text-slate-600 my-3 px-4 shadow-sm"
               value={title}
               onChangeText={value => setTitle(value)}
             />
@@ -68,7 +68,7 @@ export default function AddExpenseScreen(props) {
             <TextInput
               placeholder="Amount"
               placeholderTextColor="#64748b"
-              className="bg-white rounded-md my-3 px-4 shadow-md"
+              className="bg-white rounded-md text-slate-600 my-3 px-4 shadow-md"
               value={amount}
               onChangeText={value => setAmount(value)}
             />

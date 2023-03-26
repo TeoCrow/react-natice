@@ -14,6 +14,7 @@ import WelcomeScreen from '../screens/WelcomeScreen';
 import {onAuthStateChanged} from 'firebase/auth';
 import {auth} from '../config/firebase';
 import {setUser} from '../redux/slices/user';
+import Splash from '../Component/Splash';
 
 const Stack = createNativeStackNavigator();
 
@@ -56,7 +57,7 @@ export default function AppNavigation() {
   } else {
     return (
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Welcome">
+        <Stack.Navigator initialRouteName="Splash">
           <Stack.Screen
             options={{headerShown: false, presentation: 'modal'}}
             name="SignIn"
@@ -71,6 +72,11 @@ export default function AppNavigation() {
             options={{headerShown: false}}
             name="Welcome"
             component={WelcomeScreen}
+          />
+          <Stack.Screen
+            options={{headerShown: false}}
+            name="Splash"
+            component={Splash}
           />
         </Stack.Navigator>
       </NavigationContainer>
